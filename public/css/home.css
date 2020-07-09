@@ -1,0 +1,82 @@
+html, body {
+    height:100% !important;
+    margin:0 !important;
+}
+
+.space-section-store {
+    padding-top: 3rem !important;
+}
+
+.link-button-details {
+    color: #606479 !important;
+    font-size: 14px !important;
+}
+
+.img-user-home-space {
+    margin-top: 6px;
+}
+
+.space-title-product {
+    margin-bottom: 2rem;
+}
+
+.margin-table-store {
+    margin-right: 1rem;
+}
+
+.content-home {
+    background-color: #F8F9FA;
+}
+
+.nav-link {
+    display: inline-block !important;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+@media (min-width: 768px) {
+    .jumbotron {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.jumbotron p:last-child {
+    margin-bottom: 0;
+}
+
+.jumbotron h1 {
+    font-weight: 300;
+}
+
+.jumbotron .container {
+    max-width: 40rem;
+}
+
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/login.css">
+        <title>Login</title>
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="store-home-space-top"></div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-5"> 
+                    <form action="/login" method="post">
+                        <div class="card card-color-login">
+                            <div class="card-body card-body-login">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title card-title-login text-center">Inicio de Sesión</h5>
+                                    </div>
+                                </div>
+                                <div class="row card-text-login">
+                                    <div class="col-1"></div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img src="icon/user-login.png" alt="user">
+                                            </div>
+                                            <div class="col">
+                                                <input id="password" name="email" class="input-login-email" type="text" placeholder="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row card-text-login">
+                                    <div class="col-1"></div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img src="icon/password-icon.png" alt="user">
+                                            </div>
+                                            <div class="col">
+                                                <input id="email" name="password" class="input-login-email" type="password" placeholder="password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"></div>
+                                    <div class="col-4 card-space-button">
+                                        <input id="btn-login" type="submit" class="btn card-button-login btn-block" value="Ingresar">
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </body>
+</html>

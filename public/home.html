@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/home.css">
+        <title>Home</title>
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="col-2">
+                        <a class="navbar-brand" href="#">Tienda</a>
+                    </div>
+                    <div class="col"></div>
+                    <div class="col-5">
+                        <div class="navbar-nav">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-2 img-user-home-space">
+                                        <img src="icon/user-login.png" alt="usuario">
+                                    </div>
+                                    <div class="col-8">
+                                        <a class="nav-item nav-link" href="#">Sesión Iniciada</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-2"></div>
+                                    <div class="col">
+                                        <a class="nav-item nav-link active" href="login.html">Cerrar Sesión</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal-title-product"></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="modal-body-product">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Precio</th>
+                          </tr>
+                        </thead>
+                        <tbody id="body-table-details">
+                            <tr id="row-table-details">
+                                <td id="column-table-name"></td>
+                                <td id="column-table-descript"></td>
+                                <td id="column-table-price"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer" id="modal-footer-store"></div>
+              </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModalDeteleShoppingCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Eliminar Producto</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead text-center">
+                        ¿Estás seguro que deseas eliminar el producto?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="button-continue-delete-product">Continuar</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <section class="jumbotron text-center">
+            <div id="idContainer" class="container">
+                <h1>Technology Magic Store</h1>
+                <p class="lead text-muted">El único lugar donde encuentras lo que buscas.</p>
+                <a href="#shopping-cart" class="btn btn-primary my-2" >Ir al carrito</a>
+            </div>
+        </section>
+        <section class="content-home space-section-store">
+            <div class="row">
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col text-center">
+                            <canvas id="lienzoGrafica" width="250" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col margin-table-store">
+                            <table class="table table-hover">
+                                <caption>Catálogo de Productos</caption>
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Porcentaje</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Información</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="body-table-store"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="shopping-cart" class="album py-5 bg-light">
+            <div class="container">
+                <div class="my-3 p-3 bg-white rounded shadow-sm" id="shopping-cart-list"></div>
+            </div>
+        </div>
+        <footer class="text-muted content-home">
+            <div class="container">
+                <p>Project Store &copy; UNIVDEP!</p>
+            </div>
+        </footer>
+        <script src="home.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </body>
+</html>
+
+

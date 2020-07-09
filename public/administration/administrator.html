@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <title>Administration</title>
+  </head>
+  <body>
+
+    <div id="titulo" class="active-on">
+      <div class="container">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <br>
+            <h1 class="display-3 text-center">Sesión Administrativa</h1>
+            <br>
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mostrar-productos" class="active-off">
+      <div class="container">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Cantidad</th>
+                </tr>
+              </thead>
+              <tbody id="producto-fila-tabla">
+              </tbody>
+            </table>
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="menu" class="active-on">
+      <div class="container">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <div class="row">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-center">
+                      <button id="menu-boton-ver" class="btn" type="button"><img src="../icon/view.png" alt="Ver Productos" height="42" width="42"/></button>
+                    </th>
+                    <th scope="col" class="text-center">
+                      <button id="menu-boton-editar" class="btn" type="button"><img src="../icon/editProduct.png" alt="Editar" height="42" width="42"/></button>
+                    </th>
+                    <th scope="col" class="text-center">
+                      <button id="menu-boton-agregar" class="btn" type="button"><img src="../icon/addProduct.png" alt="Agregar" height="42" width="42"/></button>
+                    </th>
+                    <th scope="col" class="text-center">
+                      <button id="menu-boton-eliminar" class="btn" type="button"><img src="../icon/remove.png" alt="Eliminar" height="42" width="42"/></button>
+                    </th>
+                    <th scope="col" class="text-center">
+                      <button id="salir-sesion" class="btn" type="button"><img src="../icon/exit.png" alt="Salir" height="42" width="42"/></button>
+                    </th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="agregar-producto"  class="active-off">
+      <div class="container">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <div class="row">
+              <p class="h5">Producto</p>
+              <input type="text" class="form-control" id="id-producto-agregar"/>
+            </div>
+            <div class="row">
+              <p class="h5">Descripcion</p>
+              <input type="text" class="form-control" id="id-descripcion-agregar"/>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <p class="h5">Cantidad</p>
+                  <input type="text" class="form-control" id="id-cantidad-agregar"/>
+                </div>
+              </div>
+              <div class="col-1"></div>
+              <div class="col">
+                <div class="row">
+                  <p class="h5">Precio</p>
+                  <input type="text" class="form-control" id="id-precio-agregar"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <p class="h5">Categoria</p>
+              <select id="id-categoria-agregar" class="form-control" id="exampleFormControlSelect2">
+                <option value="0">Seleccionar</option>
+                <option value="1">Television y Video</option>
+                <option value="2">Equipos de Audio</option>
+                <option value="3">Celulares y Accesorios</option>
+                <option value="4">Oficina y Papeleria</option>
+                <option value="5">Accesorios Electronicos</option>
+              </select>
+            </div>
+            <div class="row">
+              <p class="h5">Color(rgb)</p>
+            </div>
+            <div class="row">
+              <br>
+              <canvas id="lienzo1" width="300" height="100"></canvas>
+            </div>
+            <div class="row">
+              <div class="text-center">
+                <br>
+                <table>
+                    <tr>
+                        <td><input class="text-right" type="text" id="rTexto" size="3"></td>
+                        <td><input class="text-right" type="text" id="gTexto" size="3"></td>
+                        <td><input class="text-right" type="text" id="bTexto" size="3"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="range" id="rRango" value="0" min="0" max="255"></td>
+                        <td><input type="range" id="gRango" value="0" min="0" max="255"></td>
+                        <td><input type="range" id="bRango" value="0" min="0" max="255"></td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <button id="id-boton-agregar" class="btn btn-primary" type="button">Agregar Producto</button>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+      <br>
+    </div>
+
+    <div id="editar-producto" class="active-off">
+      <div class="container">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">    
+            <h4 class="text-center">Editar Producto Seleccionado</h4>
+            <div class="row">
+              <p class="h5">Número de Producto</p>
+              <input type="text" class="form-control" id="id-numero-editar" disabled/>
+            </div>
+            <div class="row">
+              <p class="h5">Producto</p>
+              <input type="text" class="form-control" id="id-producto-editar"/>
+            </div>
+            <div class="row">
+              <p class="h5">Cantidad</p>
+              <input type="text" class="form-control" id="id-cantidad-editar"/>
+            </div>
+            <br>
+            <div class="row">
+              <button id="id-boton-editar" class="btn btn-primary" type="button">Editar Producto</button>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+      <br>
+    </div>
+
+    <div id="eliminar-producto"  class="active-off">
+      <div class="container">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <h4 class="text-center">Eliminar Producto Seleccionado</h4>
+            <div class="row">
+              <p class="h5">Número de Producto</p>
+              <input type="text" class="form-control" id="id-numero-eliminar" disabled/>
+            </div>
+            <br>
+            <div class="row">
+              <button id="id-boton-eliminar" class="btn btn-primary" type="button">Eliminar Producto</button>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+      <br>
+    </div>
+    <script src="administrator.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </body>
+</html>

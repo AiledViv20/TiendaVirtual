@@ -1,0 +1,31 @@
+html, body {
+    height:100% !important;
+    margin:0 !important;
+    background-image: url('../image/background3.png') !important;
+}
+
+.store-home-background {
+    color: white;
+}
+
+.store-home-margin {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.store-home-space-top {
+    height: 8rem;
+}
+
+.store-home-button {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.store-home-button:hover {
+    background-color: #46234D !important;
+}
+
+.bg-color-navbar {
+    background-color: #46234D;
+}

@@ -1,0 +1,88 @@
+html, body {
+    height:100% !important;
+    margin:0 !important;
+    background-image: url('../image/login.jpeg') !important;
+}
+
+.store-home-space-top {
+    height: 8rem;
+}
+
+.card-body-login {
+    padding: 1.25rem 1rem 1.25rem 1rem;
+}
+
+.card-color-login {
+    /*background-color: rgb(43,47,62) !important;*/
+    background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
+    background-image: linear-gradient(45deg, rgb(53, 57, 74) 0%, rgb(31, 34, 46) 100%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    color: #afb1be !important;
+}
+
+.card-title-login {
+    margin-top: 5rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.card-text-login {
+    margin-top: -2px;
+    background: #32364a !important;
+    left: 0;
+    padding: 10px 65px 10px 65px;
+    border-top: 2px solid #393d52;
+    border-bottom: 2px solid #393d52;
+    border-right: none;
+    border-left: none;
+    outline: none;
+    font-family: 'Gudea', sans-serif;
+    box-shadow: none;
+}
+
+.input-login-email {
+    background-color: transparent !important;
+    background: inherit !important;
+    color: #afb1be;
+    border: 0;
+}
+
+.input-login-email::placeholder { 
+    color: #4A5068 !important; 
+}
+
+input:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.card-space-button {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.card-button-login {
+    color: #D428BA;
+    border-color: #D428BA !important;
+    border: 2px solid !important;
+}
+
+.card-button-login:hover{
+    color: #fff;
+    background-color: #D428BA !important;
+    border-color: #D428BA !important;
+}
+
+.card-button-registry {
+    color: #606479 !important;
+    font-size: 14px !important;
+}
